@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRB - Chậu rửa bát</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container flex-between align-center">
+            <div class="logo">
+                <h2>CRB</h2>
+                <span class="slogan">ĐÚNG CHẬU - ĐÚNG BẾP</span>
+            </div>
+            
+            <div class="mobile-menu-toggle" id="mobile-menu-toggle">☰</div>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#">Chọn chậu <span>▼</span></a>
+                <a href="#">Chậu rửa bát</a>
+                <a href="#">Thay chậu cũ</a>
+                <a href="#">Cẩm nang</a>
+                <a href="#">Showroom</a>
+            </nav>
+
+            <div class="header-action flex-center">
+                <div class="hotline">
+                    <span>Hotline</span>
+                    <strong>0961 234 567</strong>
+                </div>
+                <button class="btn btn-primary">TÌM CHẬU PHÙ HỢP ➔</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero bg-light">
+        <div class="container flex-row">
+            <div class="hero-content">
+                <h1>Tìm chậu rửa bát<br>phù hợp với bếp<br>của bạn</h1>
+                <p class="subtitle">Chọn đúng chậu. Đúng kích thước. Đúng phong cách.<br>Với CRB FitMatch, việc chọn chậu trở nên đơn giản hơn bao giờ hết.</p>
+                
+                <div class="hero-buttons flex-row">
+                    <button class="btn btn-primary">BẮT ĐẦU CHỌN CHẬU ➔</button>
+                    <button class="btn btn-outline">THAY CHẬU CŨ</button>
+                </div>
+
+                <div class="hero-features flex-row">
+                    <div class="feature-item flex-center">
+                        <span class="icon">⚡</span>
+                        <div><strong>Chọn nhanh</strong><br>Chỉ vài bước</div>
+                    </div>
+                    <div class="feature-item flex-center">
+                        <span class="icon">🛡️</span>
+                        <div><strong>Đa thương hiệu</strong><br>Hàng chính hãng</div>
+                    </div>
+                    <div class="feature-item flex-center">
+                        <span class="icon">🔧</span>
+                        <div><strong>Dễ lắp đặt</strong><br>Hỗ trợ toàn quốc</div>
+                    </div>
+                </div>
+                
+                <div class="hero-signature">
+                    <i>Bếp tốt hơn mỗi ngày</i>
+                </div>
+            </div>
+
+            <div class="hero-form">
+                <div class="form-card">
+                    <div class="form-header flex-between">
+                        <h3>CRB FitMatch <span class="badge">AI</span></h3>
+                        <span class="sub-text">Chọn chậu phù hợp chỉ trong vài bước</span>
+                    </div>
+                    
+                    <form id="ai-form">
+                        <div class="form-group">
+                            <label>1. Tình trạng bếp của bạn</label>
+                            <div class="radio-group flex-row">
+                                <label><input type="radio" name="status" checked> Bếp mới</label>
+                                <label><input type="radio" name="status"> Thay chậu cũ</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>2. Kích thước tủ bếp (cm)</label>
+                            <select><option>Chọn kích thước tủ</option></select>
+                        </div>
+                        <div class="form-group">
+                            <label>3. Ngân sách dự kiến</label>
+                            <select><option>Chọn khoảng ngân sách</option></select>
+                        </div>
+                        <div class="form-group">
+                            <label>4. Ưu tiên của bạn</label>
+                            <div class="radio-group flex-row">
+                                <label><input type="radio" name="priority" checked> Bền bỉ</label>
+                                <label><input type="radio" name="priority"> Thẩm mỹ</label>
+                                <label><input type="radio" name="priority"> Đa năng</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>5. Tải ảnh bếp lên <span class="light-text">(Không bắt buộc)</span></label>
+                            <div class="upload-box flex-center">
+                                <span>Tải ảnh bếp vào đây<br>hoặc chọn ảnh</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-full" id="btn-submit-form">XEM GỢI Ý PHÙ HỢP ➔</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories container section-padding">
+        <div class="section-header flex-between">
+            <div>
+                <h2>Chọn theo nhu cầu</h2>
+                <p>Chọn loại chậu phù hợp với không gian bếp của bạn</p>
+            </div>
+            <a href="#" class="link">Xem tất cả danh mục ➔</a>
+        </div>
+        
+        <div class="row">
+            <div class="col-4 category-card">
+                <img src="https://placehold.co/400x250/eee/999?text=Chau+1+ho" alt="Chậu 1 hố">
+                <div class="flex-between">
+                    <div>
+                        <h4>Chậu 1 hố</h4>
+                        <p>Tiện ích, rộng rãi</p>
+                    </div>
+                    <span>➔</span>
+                </div>
+            </div>
+            <div class="col-4 category-card">
+                <img src="https://placehold.co/400x250/eee/999?text=Chau+2+ho" alt="Chậu 2 hố">
+                <div class="flex-between">
+                    <div>
+                        <h4>Chậu 2 hố</h4>
+                        <p>Linh hoạt, tiện dụng</p>
+                    </div>
+                    <span>➔</span>
+                </div>
+            </div>
+            <div class="col-4 category-card">
+                <img src="https://placehold.co/400x250/eee/999?text=Workstation" alt="Workstation">
+                <div class="flex-between">
+                    <div>
+                        <h4>Workstation</h4>
+                        <p>Đa năng, hiện đại</p>
+                    </div>
+                    <span>➔</span>
+                </div>
+            </div>
+            <div class="col-4 category-card">
+                <img src="https://placehold.co/400x250/eee/999?text=Thay+chau+cu" alt="Thay chậu cũ">
+                <div class="flex-between">
+                    <div>
+                        <h4>Thay chậu cũ</h4>
+                        <p>Vừa vặn, dễ dàng</p>
+                    </div>
+                    <span>➔</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products container section-padding">
+        <div class="section-header flex-between">
+            <div>
+                <h2>3 mẫu phù hợp nhất cho bạn</h2>
+                <p>Được gợi ý bởi CRB FitMatch dựa trên nhu cầu của bạn</p>
+            </div>
+            <a href="#" class="link">Xem tất cả sản phẩm ➔</a>
+        </div>
+
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-3 product-card">
+                <img src="https://placehold.co/400x250/eee/999?text=Hafele" alt="Product">
+                <div class="product-info">
+                    <span class="brand">HAFELE</span>
+                    <h4>Chậu rửa bát Hafele HS22-8040</h4>
+                    <div class="price">
+                        <strong class="text-primary">4.990.000đ</strong>
+                        <del>6.290.000đ</del>
+                    </div>
+                    <div class="specs flex-row flex-wrap">
+                        <span>🏷️ 1 hố lớn</span>
+                        <span>🛡️ Inox 304</span>
+                        <span>🔧 Lắp âm/Bán âm</span>
+                    </div>
+                    <div class="product-actions flex-row">
+                        <button class="btn btn-primary">Xem chi tiết ➔</button>
+                        <button class="btn btn-outline">🛒 Thêm vào giỏ hàng</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="col-3 product-card">
+                <img src="https://placehold.co/400x250/eee/999?text=Malloca" alt="Product">
+                <div class="product-info">
+                    <span class="brand">MALLOCA</span>
+                    <h4>Chậu rửa bát Malloca MS 5813</h4>
+                    <div class="price">
+                        <strong class="text-primary">3.890.000đ</strong>
+                        <del>5.200.000đ</del>
+                    </div>
+                    <div class="specs flex-row flex-wrap">
+                        <span>🏷️ 1 hố lớn</span>
+                        <span>🛡️ Inox 304</span>
+                        <span>↔️ Sâu lòng 220mm</span>
+                    </div>
+                    <div class="product-actions flex-row">
+                        <button class="btn btn-primary">Xem chi tiết ➔</button>
+                        <button class="btn btn-outline">🛒 Thêm vào giỏ hàng</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-3 product-card">
+                <img src="https://placehold.co/400x250/eee/999?text=Konox" alt="Product">
+                <div class="product-info">
+                    <span class="brand">KONOX</span>
+                    <h4>Chậu rửa bát Konox KN8245SU</h4>
+                    <div class="price">
+                        <strong class="text-primary">4.750.000đ</strong>
+                        <del>6.800.000đ</del>
+                    </div>
+                    <div class="specs flex-row flex-wrap">
+                        <span>🏷️ 2 hố lệch</span>
+                        <span>🛡️ Inox 304</span>
+                        <span>↔️ Sâu lòng 220mm</span>
+                    </div>
+                    <div class="product-actions flex-row">
+                        <button class="btn btn-primary">Xem chi tiết ➔</button>
+                        <button class="btn btn-outline">🛒 Thêm vào giỏ hàng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Replacement Banner -->
+    <section class="replacement-banner">
+        <div class="container row align-center">
+            <div class="col-5 banner-text">
+                <h2>Muốn thay chậu cũ nhưng sợ không vừa lỗ đá?</h2>
+                <p>Chỉ cần chụp ảnh, nhập kích thước (nếu có). CRB sẽ giúp bạn kiểm tra và gợi ý mẫu chậu phù hợp nhanh chóng.</p>
+                <button class="btn btn-primary mt-2">THỬ NGAY VỚI ẢNH BẾP CỦA BẠN ➔</button>
+            </div>
+            <div class="col-7 banner-steps row">
+                <div class="col-3 step-item">
+                    <div class="step-icon">📸</div>
+                    <h5>Chụp ảnh</h5>
+                    <p>Ảnh bếp hiện tại</p>
+                </div>
+                <div class="col-3 step-item">
+                    <div class="step-icon">📏</div>
+                    <h5>Nhập kích thước</h5>
+                    <p>Lỗ đá, tủ bếp (nếu có)</p>
+                </div>
+                <div class="col-3 step-item">
+                    <div class="step-icon">🤖</div>
+                    <h5>CRB Matching</h5>
+                    <p>Tìm mẫu phù hợp chỉ trong vài giây</p>
+                </div>
+                <div class="col-3 step-item">
+                    <div class="step-icon">👁️</div>
+                    <h5>Xem trước sau lắp</h5>
+                    <p>Hình ảnh minh họa trực quan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta bg-dark">
+        <div class="container flex-between align-center">
+            <div class="cta-text">
+                <h3>Gửi ảnh bếp, CRB hỗ trợ chọn nhanh.</h3>
+                <p>Đội ngũ chuyên gia luôn sẵn sàng tư vấn cho bạn.</p>
+            </div>
+            <div class="cta-action flex-row align-center">
+                <button class="btn btn-primary">NHẬN TƯ VẤN NGAY ➔</button>
+                <div class="hotline-white">
+                    <span>Hotline</span><br>
+                    <strong>0961 234 567</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer container section-padding">
+        <div class="row">
+            <div class="col-4 footer-col">
+                <h2>CRB</h2>
+                <p>Giải pháp chậu rửa bát toàn diện cho mọi căn bếp Việt.</p>
+                <p class="mt-2">© 2023 CRB. All rights reserved.</p>
+            </div>
+            <div class="col-2 footer-col">
+                <h4>Sản phẩm</h4>
+                <ul>
+                    <li><a href="#">Chậu rửa bát</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
+                    <li><a href="#">Bộ xả - vòi rửa</a></li>
+                    <li><a href="#">Tất cả sản phẩm</a></li>
+                </ul>
+            </div>
+            <div class="col-2 footer-col">
+                <h4>Hỗ trợ</h4>
+                <ul>
+                    <li><a href="#">Thay chậu cũ</a></li>
+                    <li><a href="#">Hướng dẫn chọn chậu</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                    <li><a href="#">Chính sách giao hàng</a></li>
+                </ul>
+            </div>
+            <div class="col-2 footer-col">
+                <h4>Về CRB</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Showroom</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="col-2 footer-col">
+                <h4>Kết nối với chúng tôi</h4>
+                <div class="socials">
+                    <span>📘</span> <span>🎵</span> <span>📺</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
