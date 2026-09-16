@@ -186,30 +186,32 @@ a {
 .socials { font-size: 24px; gap: 15px; display: flex; }
 
 /* ================= Responsive ================= */
+/* ===== Màn hình Máy tính bảng (Tablet) ===== */
 @media (max-width: 992px) {
     .hero-content { flex: 0 0 100%; max-width: 100%; padding: 0 0 30px 0; }
     .hero-form { flex: 0 0 100%; max-width: 100%; padding: 0; }
-    .col-4, .col-3 { flex: 0 0 50%; max-width: 50%; }
+    .col-4, .col-3, .col-2 { flex: 0 0 50%; max-width: 50%; }
     .col-5, .col-7 { flex: 0 0 100%; max-width: 100%; margin-bottom: 20px; }
     .nav-menu, .header-action { display: none; }
     .mobile-menu-toggle { display: block; }
+    .header-action { display: flex; } 
+    .header-action .btn { display: none; }
 }
-
+/* ===== Màn hình Điện thoại (Mobile) ===== */
 @media (max-width: 576px) {
     .col-4, .col-3, .col-2 { flex: 0 0 100%; max-width: 100%; }
     .hero-buttons .btn { width: 100%; margin-bottom: 10px; }
     .product-actions { flex-direction: column; }
     .footer-col { margin-bottom: 30px; }
     .cta-action { flex-direction: column; align-items: flex-start; margin-top: 20px; }
-    /* Tinh chỉnh Font chữ */
+    .header-action .hotline { text-align: left; }
+    .header-action .hotline span { display: none; }
     .hero-content h1 { font-size: 32px; }
     .hero-signature { font-size: 22px; }
-    
-    /* Tinh chỉnh khoảng cách khối */
+    .radio-group { flex-direction: column; gap: 12px; }
+    .form-group select { padding: 12px; }
     .section-padding { padding: 30px 15px; }
     .hero { padding: 20px 0; }
-    
-    /* Tối ưu vùng chạm cho nút */
-    .btn { padding: 14px 15px; } /* Làm nút cao hơn cho dễ bấm */
+    .btn { padding: 14px 15px; } 
     .product-actions .btn { width: 100%; margin-bottom: 8px; }
 }
