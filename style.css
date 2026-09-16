@@ -6,6 +6,9 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth; /* Thêm hiệu ứng cuộn mượt mà */
+}
 body {
     color: #333;
     line-height: 1.5;

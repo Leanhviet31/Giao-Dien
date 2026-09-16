@@ -29,8 +29,9 @@
                 <div class="hotline">
                     <span>Hotline</span>
                     <strong>0961 234 567</strong>
-                </div>
-                <button class="btn btn-primary">TÌM CHẬU PHÙ HỢP ➔</button>
+            </div>
+    
+                    <button id="btn-tim-chau" class="btn btn-primary">TÌM CHẬU PHÙ HỢP ➔</button>
             </div>
         </div>
     </header>
@@ -43,8 +44,8 @@
                 <p class="subtitle">Chọn đúng chậu. Đúng kích thước. Đúng phong cách.<br>Với CRB FitMatch, việc chọn chậu trở nên đơn giản hơn bao giờ hết.</p>
                 
                 <div class="hero-buttons flex-row">
-                    <button class="btn btn-primary">BẮT ĐẦU CHỌN CHẬU ➔</button>
-                    <button class="btn btn-outline">THAY CHẬU CŨ</button>
+                    <button id="btn-bat-dau" class="btn btn-primary">BẮT ĐẦU CHỌN CHẬU ➔</button>
+                    <button id="btn-thay-chau" class="btn btn-outline">THAY CHẬU CŨ</button>
                 </div>
 
                 <div class="hero-features flex-row">
@@ -99,10 +100,11 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>5. Tải ảnh bếp lên <span class="light-text">(Không bắt buộc)</span></label>
-                            <div class="upload-box flex-center">
-                                <span>Tải ảnh bếp vào đây<br>hoặc chọn ảnh</span>
-                            </div>
+                            <label>5. Tải ảnh bếp lên <span class="light-text">(Không bắt buộc)</span></label>  
+                                <div class="upload-box flex-center" id="upload-box">  
+                            <input type="file" id="file-upload" accept="image/*" style="display: none;">
+                                <span id="upload-text">Tải ảnh bếp vào đây<br>hoặc chọn ảnh</span>
+                        </div>
                         </div>
                         <button type="button" class="btn btn-primary btn-full" id="btn-submit-form">XEM GỢI Ý PHÙ HỢP ➔</button>
                     </form>
@@ -112,7 +114,7 @@
     </section>
 
     <!-- Categories -->
-    <section class="categories container section-padding">
+    <section id="chon-theo-nhu-cau" class="categories container section-padding">
         <div class="section-header flex-between">
             <div>
                 <h2>Chọn theo nhu cầu</h2>
@@ -166,10 +168,10 @@
     </section>
 
     <!-- Products -->
-    <section class="products container section-padding">
+    <section id="mau-phu-hop" class="products container section-padding">
         <div class="section-header flex-between">
             <div>
-                <h2>3 mẫu phù hợp nhất cho bạn</h2>
+                <h2>Mẫu phù hợp nhất cho bạn</h2>
                 <p>Được gợi ý bởi CRB FitMatch dựa trên nhu cầu của bạn</p>
             </div>
             <a href="#" class="link">Xem tất cả sản phẩm ➔</a>
