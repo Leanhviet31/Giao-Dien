@@ -201,4 +201,15 @@ a {
     .product-actions { flex-direction: column; }
     .footer-col { margin-bottom: 30px; }
     .cta-action { flex-direction: column; align-items: flex-start; margin-top: 20px; }
+    /* Tinh chỉnh Font chữ */
+    .hero-content h1 { font-size: 32px; }
+    .hero-signature { font-size: 22px; }
+    
+    /* Tinh chỉnh khoảng cách khối */
+    .section-padding { padding: 30px 15px; }
+    .hero { padding: 20px 0; }
+    
+    /* Tối ưu vùng chạm cho nút */
+    .btn { padding: 14px 15px; } /* Làm nút cao hơn cho dễ bấm */
+    .product-actions .btn { width: 100%; margin-bottom: 8px; }
 }
