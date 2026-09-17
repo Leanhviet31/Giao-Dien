@@ -94,7 +94,16 @@ a {
 .logo h2 { color: #0d3b45; font-weight: 900; line-height: 1; margin: 0; }
 .slogan { font-size: 10px; color: #666; letter-spacing: 1px; }
 
-.nav-menu { display: flex; gap: 20px; font-weight: 500; font-size: 15px; }
+.nav-menu { 
+    display: flex; 
+    gap: 35px; 
+    font-weight: 500; 
+    font-size: 15px; 
+    
+    
+    margin-left: 40px;
+    margin-right: auto; 
+}
 .nav-menu a:hover { color: #f26522; }
 
 .header-action { gap: 20px; }
