@@ -186,6 +186,48 @@ a {
 .socials { font-size: 24px; gap: 15px; display: flex; }
 
 /* ================= Responsive ================= */
+/* ================= TỐI ƯU CHO PC / MÀN HÌNH RỘNG ================= */
+
+/* 1. Tối ưu Màn hình lớn (Ultra Wide / Full HD) */
+@media (min-width: 1400px) {
+    .container { 
+        max-width: 1320px; /* Mở rộng khung chứa */
+    }
+    .hero-content h1 { 
+        font-size: 50px; /* Chữ to hơn cho cân xứng với màn hình lớn */
+    }
+}
+
+/* 2. Menu bám đỉnh (Sticky Header) */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Đảm bảo menu luôn nằm trên cùng che các phần khác */
+    background: rgba(255, 255, 255, 0.95); /* Làm nền hơi trong suốt cho hiện đại */
+    backdrop-filter: blur(5px); /* Hiệu ứng kính mờ (khi cuộn qua ảnh) */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Đổ bóng nhẹ phân tách với nội dung */
+}
+
+/* 3. Hiệu ứng Hover nâng cao cho Sản phẩm và Danh mục */
+/* Sản phẩm trượt lên và đổ bóng đậm hơn */
+.product-card {
+    transition: all 0.3s ease; 
+}
+.product-card:hover {
+    transform: translateY(-8px); /* Nhấc bổng thẻ sản phẩm lên 8px */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* Bóng đổ to và mờ hơn */
+}
+
+/* Ảnh danh mục phóng to nhẹ */
+.category-card img {
+    transition: transform 0.4s ease;
+}
+.category-card {
+    overflow: hidden; /* Cắt phần ảnh bị lồi ra khi phóng to */
+}
+.category-card:hover img {
+    transform: scale(1.05); /* Phóng to ảnh thêm 5% */
+}
 /* ===== Màn hình Máy tính bảng (Tablet) ===== */
 @media (max-width: 992px) {
     .hero-content { flex: 0 0 100%; max-width: 100%; padding: 0 0 30px 0; }
