@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRB - Chậu rửa bát</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -12,7 +13,7 @@
         <div class="container flex-between align-center">
             <div class="logo">
                 <a href="#">
-                    <img src="1789629695266_8460239123042280268_8460239123042280268_13d611da6de4e13d193c2ceb1c291da8.jpg" alt="CRB Logo" class="img-logo">
+                    <img src="1789629695266_8460239123042280268_8460239123042280268_13d611da6de4e13d193c2ceb1c291da8-removebg-preview.png" alt="CRB Logo" class="img-logo">
                 </a>
             </div>
             
@@ -52,17 +53,23 @@
                     <button id="btn-thay-chau" class="btn btn-outline bg-white">THAY CHẬU CŨ</button>
                 </div>
 
-                <div class="hero-features flex-row">
+               <div class="hero-features flex-row">
                     <div class="feature-item flex-center">
-                        <span class="icon dark-icon">⚡</span>
+                        <span class="icon dark-icon">
+                            <i class="fa-solid fa-bolt" style="color: #d1d5db;"></i>
+                        </span>
                         <div><strong>Chọn nhanh</strong><br>Chỉ vài bước</div>
                     </div>
                     <div class="feature-item flex-center">
-                        <span class="icon dark-icon">🛡️</span>
+                        <span class="icon dark-icon">
+                            <i class="fa-solid fa-shield-halved" style="color: #d1d5db;"></i>
+                        </span>
                         <div><strong>Đa thương hiệu</strong><br>Hàng chính hãng</div>
                     </div>
                     <div class="feature-item flex-center">
-                        <span class="icon dark-icon">🔧</span>
+                        <span class="icon dark-icon">
+                            <i class="fa-solid fa-wrench" style="color: #d1d5db;"></i>
+                        </span>
                         <div><strong>Có lắp đặt</strong><br>Hỗ trợ toàn quốc</div>
                     </div>
                 </div>
@@ -77,43 +84,93 @@
                 <div class="form-card complex-form">
                     <div class="form-main">
                         <div class="form-header flex-between">
-                            <h3>CRB FitMatch <span class="badge">AI</span></h3>
-                            <span class="sub-text">Chọn chậu phù hợp chỉ trong vài bước</span>
+
                         </div>
                         
-                        <form id="ai-form">
-                            <div class="form-group">
-                                <label><span class="step-num">1</span> Tình trạng bếp của bạn</label>
-                                <div class="radio-group flex-row">
-                                    <label><input type="radio" name="status" checked> <span class="radio-text">Bếp mới</span></label>
-                                    <label><input type="radio" name="status"> <span class="radio-text">Thay chậu cũ</span></label>
-                                </div>
+                        <!-- Header của Form AI -->
+                   <div class="form-header" style="display: block; margin-bottom: 20px;">
+                        <div class="title-row" style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                            
+                            <!-- Ép kích thước trực tiếp vào thẻ img -->
+                            <img src="1789629695266_8460239123042280268_8460239123042280268_13d611da6de4e13d193c2ceb1c291da8-removebg-preview.png" alt="CRB Logo" style="height: 50px; width: auto; margin: 0; display: block; object-fit: contain; transform: translateY(2px);">
+                            
+                            <h3 style="margin: 0; font-size: 22px; line-height: 1; display: flex; align-items: center; gap: 8px;">
+                                FitMatch <span class="badge" style="background: #00796b; color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 12px;">AI</span>
+                            </h3>
+                            
+                        </div>
+                        <span class="sub-text" style="margin: 0;">Chọn chậu phù hợp chỉ trong vài bước</span>
+                    </div>
+                    
+                    <style>
+                        .radio-pill {
+                            display: inline-flex !important;
+                            align-items: center !important;
+                            border: 1px solid #ccc !important;
+                            border-radius: 30px !important;
+                            padding: 6px 15px !important;
+                            background-color: #fff !important;
+                            cursor: pointer;
+                            margin-right: 10px;
+                            transition: all 0.2s ease;
+                        }
+                        /* Kết hợp cả 2 phương pháp đổi màu để đảm bảo hoạt động */
+                        .radio-pill:has(input:checked),
+                        .radio-pill.active {
+                            border-color: #f26522 !important;
+                            background-color: #fffaf7 !important;
+                        }
+                        .radio-pill input[type="radio"] {
+                            accent-color: #f26522 !important;
+                            transform: scale(1.2) !important;
+                            margin: 0 8px 0 0 !important;
+                            cursor: pointer;
+                        }
+                        .radio-pill .radio-text {
+                            font-size: 14px !important;
+                            color: #333 !important;
+                        }
+                    </style>
+                    <!-- Nội dung Form -->
+                    <form id="ai-form">
+                        <div class="form-group">
+                            <label><span class="step-num">1</span> Tình trạng bếp của bạn</label>
+                            <div class="radio-group flex-row">
+                                <!-- Thêm class radio-pill để tạo viền bo tròn -->
+                                <label class="radio-pill"><input type="radio" name="status" checked> <span class="radio-text">Bếp mới</span></label>
+                                <label class="radio-pill"><input type="radio" name="status"> <span class="radio-text">Thay chậu cũ</span></label>
                             </div>
-                            <div class="form-group">
-                                <label><span class="step-num">2</span> Kích thước tủ bếp (cm)</label>
-                                <select><option>Chọn kích thước tủ</option></select>
+                        </div>
+                        <div class="form-group">
+                            <label><span class="step-num">2</span> Kích thước tủ bếp (cm)</label>
+                            <select><option>Chọn kích thước tủ</option></select>
+                        </div>
+                        <div class="form-group">
+                            <label><span class="step-num">3</span> Ngân sách dự kiến</label>
+                            <select><option>Chọn khoảng ngân sách</option></select>
+                        </div>
+                        <div class="form-group">
+                            <label><span class="step-num">4</span> Ưu tiên của bạn</label>
+                            <div class="radio-group flex-row">
+                                <!-- Thêm class radio-pill -->
+                                <label class="radio-pill"><input type="radio" name="priority" checked> <span class="radio-text">Bền bỉ</span></label>
+                                <label class="radio-pill"><input type="radio" name="priority"> <span class="radio-text">Thẩm mỹ</span></label>
+                                <label class="radio-pill"><input type="radio" name="priority"> <span class="radio-text">Đa năng</span></label>
                             </div>
-                            <div class="form-group">
-                                <label><span class="step-num">3</span> Ngân sách dự kiến</label>
-                                <select><option>Chọn khoảng ngân sách</option></select>
+                        </div>
+                        <div class="form-group">
+                            <label><span class="step-num">5</span> Tải ảnh bếp lên <span class="light-text">(Không bắt buộc)</span></label>  
+                            <div class="upload-box flex-center" id="upload-box">  
+                                <input type="file" id="file-upload" accept="image/*" style="display: none;">
+                                <!-- Dùng icon FontAwesome thay cho mũi tên text -->
+                                <span id="upload-text">
+                                    <i class="fa-solid fa-arrow-up-from-bracket" style="font-size: 22px; margin-bottom: 8px; color: #333;"></i><br>
+                                    Kéo thả ảnh vào đây<br>hoặc chọn ảnh
+                                </span>
                             </div>
-                            <div class="form-group">
-                                <label><span class="step-num">4</span> Ưu tiên của bạn</label>
-                                <div class="radio-group flex-row">
-                                    <label><input type="radio" name="priority" checked> <span class="radio-text">Bền bỉ</span></label>
-                                    <label><input type="radio" name="priority"> <span class="radio-text">Thẩm mỹ</span></label>
-                                    <label><input type="radio" name="priority"> <span class="radio-text">Đa năng</span></label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label><span class="step-num">5</span> Tải ảnh bếp lên <span class="light-text">(Không bắt buộc)</span></label>  
-                                <div class="upload-box flex-center" id="upload-box">  
-                                    <input type="file" id="file-upload" accept="image/*" style="display: none;">
-                                    <span id="upload-text">↑ Kéo thả ảnh vào đây<br>hoặc chọn ảnh</span>
-                                </div>
-                            </div>
-                            <button type="button" class="btn btn-primary btn-full" id="btn-submit-form">XEM GỢI Ý PHÙ HỢP ➔</button>
-                        </form>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-full" id="btn-submit-form">XEM GỢI Ý PHÙ HỢP ➔</button>
+                    </form>
                     </div>
                     
                     <!-- Sidebar AI bên phải -->
@@ -327,7 +384,7 @@
         <div class="row">
             <div class="col-4 footer-col">
                 <a href="#">
-                    <img src="1789629695266_8460239123042280268_8460239123042280268_13d611da6de4e13d193c2ceb1c291da8.jpg" alt="CRB Logo" class="img-logo-footer">
+                    <img src="1789629695266_8460239123042280268_8460239123042280268_13d611da6de4e13d193c2ceb1c291da8-removebg-preview.png" alt="CRB Logo" class="img-logo-footer">
                 </a>
                 <p class="mt-2">Giải pháp chậu rửa bát toàn diện cho mọi căn bếp Việt.</p>
                 <p class="mt-2">© 2023 CRB. All rights reserved.</p>

@@ -228,13 +228,19 @@ a {
 
 .bg-white { background-color: #fff !important; }
 
-/* Thay đổi Icon thành nền đậm */
+/* Tối ưu vòng tròn Icon Font Awesome */
 .feature-item .dark-icon {
     background: #0d3b45;
-    color: #fff;
-    font-size: 18px;
-    width: 40px; height: 40px;
-    display: flex; align-items: center; justify-content: center;
+    width: 48px;  /* Tăng nhẹ kích thước vòng tròn */
+    height: 48px;
+    border-radius: 50%; /* Bo tròn tuyệt đối */
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    font-size: 20px; /* Chỉnh độ to của Icon bên trong */
+    margin-right: 12px; /* Đẩy chữ cách xa vòng tròn một chút */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 0; /* Xóa padding cũ để icon nằm ngay giữa */
 }
 
 /* Cấu trúc chia cột Form AI và Sidebar */
@@ -283,6 +289,84 @@ a {
 /* Responsive cho Sidebar khi thu nhỏ máy tính bảng */
 @media (max-width: 1200px) {
     .form-sidebar { display: none; } /* Ẩn cột Before/After nếu màn hình bị chật */
+
+    /* ===== CẬP NHẬT GIAO DIỆN FORM AI (BẢN MỚI) ===== */
+
+/* 1. Xử lý Header Form */
+.form-header {
+    display: block !important; 
+    margin-bottom: 20px;
+}
+
+.form-header .title-row {
+    display: flex;
+    align-items: center; /* Căn giữa logo và chữ theo chiều dọc */
+    gap: 10px; /* Khoảng cách giữa logo và chữ */
+    margin-bottom: 5px;
+}
+
+.form-header .form-logo {
+    height: 32px !important; /* Ép cứng chiều cao ngang với chữ H3 */
+    width: auto !important; /* Không cho phép ảnh tự phình to */
+    display: block !important;
+    margin: 0 !important;
+}
+
+.form-header h3 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1; /* Giúp chữ không bị đẩy lệch */
+}
+
+.form-header .sub-text {
+    margin: 0;
+}
+
+/* 2. Xử lý nút Radio (Viền bo tròn) */
+.radio-pill {
+    border: 1px solid #e0e0e0; /* Màu viền xám nhạt */
+    border-radius: 20px; /* Bo tròn đều 2 cạnh */
+    padding: 6px 15px;
+    cursor: pointer;
+    background: #fff;
+    transition: border-color 0.3s ease;
+}
+.radio-pill:hover {
+    border-color: #b5b5b5; /* Hiệu ứng đậm viền khi rà chuột */
+}
+
+/* ===== TẠO BOX CHO NÚT CHỌN (RADIO PILL) ===== */
+
+/* 1. Trạng thái mặc định (Viền xám) */
+.radio-pill {
+    display: inline-flex !important;
+    align-items: center !important;
+    border: 1px solid #ccc !important; /* Viền xám mặc định */
+    border-radius: 30px !important; /* Bo tròn */
+    padding: 8px 16px !important;
+    background-color: #fff !important;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 0.2s ease;
+}
+
+/* Class active sẽ được JS tự động thêm vào khi click */
+.radio-pill.active {
+    border-color: #f26522 !important; /* Viền cam */
+    background-color: #fffaf7 !important; /* Nền cam nhạt */
+}
+
+.radio-pill input[type="radio"] {
+    accent-color: #f26522;
+    transform: scale(1.2);
+    margin: 0 8px 0 0 !important;
+    cursor: pointer;
+}
+
+.radio-pill .radio-text {
+    font-size: 14px !important;
+    color: #333 !important;
+}
 }
 
 /* ================= Responsive ================= */

@@ -113,4 +113,32 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("CRB FitMatch đang xử lý thông tin để đưa ra gợi ý phù hợp nhất cho bạn!");
         });
     }
+
+// --- CODE XỬ LÝ BOX RADIO (VIỀN CAM) ---
+    const radioPills = document.querySelectorAll('.radio-pill input[type="radio"]');
+    
+    function updateRadioPills() {
+        // Xóa class active ở tất cả các box trước
+        document.querySelectorAll('.radio-pill').forEach(pill => {
+            pill.classList.remove('active');
+        });
+        
+        // Kiểm tra xem nút nào đang được chọn (checked) thì thêm class active vào box chứa nó
+        radioPills.forEach(radio => {
+            if (radio.checked) {
+                radio.closest('.radio-pill').classList.add('active');
+            }
+        });
+    }
+
+    // Lắng nghe sự kiện mỗi khi người dùng click đổi lựa chọn
+    radioPills.forEach(radio => {
+        radio.addEventListener('change', updateRadioPills);
+    });
+    
+    // Gọi hàm 1 lần ngay khi tải trang để tô màu cam cho nút mặc định
+    if(radioPills.length > 0) {
+        updateRadioPills();
+    }
+
 });
