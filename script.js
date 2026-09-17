@@ -65,6 +65,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+// --- CODE CUỘN LÊN FORM TỪ BANNER DƯỚI CÙNG ---
+    const btnThuNgay = document.getElementById("btn-thu-ngay");
+    const sectionHero = document.getElementById("hero-section");
+
+    if (btnThuNgay && sectionHero) {
+        btnThuNgay.addEventListener("click", function() {
+            // Cuộn mượt mà ngược lên phần Hero (chứa form AI)
+            sectionHero.scrollIntoView({ behavior: "smooth" });
+            
+            // Tùy chọn thêm: Tự động nhấp nháy nhẹ viền khung tải ảnh để thu hút sự chú ý
+            const uploadBox = document.getElementById("upload-box");
+            if (uploadBox) {
+                setTimeout(() => {
+                    uploadBox.style.borderColor = "#f26522";
+                    setTimeout(() => uploadBox.style.borderColor = "#ccc", 800);
+                }, 500); // Đợi cuộn lên 0.5s rồi mới nhấp nháy
+            }
+        });
+    }
+
+
     const mobileToggle = document.getElementById("mobile-menu-toggle");
     const navMenu = document.getElementById("nav-menu");
 
