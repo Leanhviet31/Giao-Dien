@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
 /* ================= Base Reset ================= */
 * {
     margin: 0;
@@ -423,6 +424,34 @@ a {
     .header-action { display: flex; } 
     .header-action .btn { display: none; }
 }
+
+/* ===== CHỈNH FONT CHỮ VIẾT TAY (SIGNATURE) ===== */
+
+/* Phần "Bếp tốt hơn mỗi ngày" */
+.hero-signature,
+.hero-signature i {
+    font-family: 'Caveat', cursive !important;
+    font-size: 38px !important; /* Chữ to rõ ràng */
+    color: #0d3b45 !important; /* Màu xanh đen đậm */
+    transform: rotate(-8deg); /* Nghiêng lên trên 8 độ */
+    display: inline-block;
+    line-height: 1.1 !important;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+/* Phần "Cùng một căn bếp - Khác biệt lớn hơn" */
+.sidebar-signature {
+    font-family: 'Caveat', cursive !important;
+    font-size: 28px !important; 
+    color: #0d3b45 !important; /* Màu xanh đen */
+    transform: rotate(-6deg); /* Nghiêng nhẹ hơn phần bên trái */
+    line-height: 1.1 !important;
+    margin-top: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
 /* ===== Màn hình Điện thoại (Mobile) ===== */
 @media (max-width: 576px) {
     .col-4, .col-3, .col-2 { flex: 0 0 100%; max-width: 100%; }
