@@ -72,6 +72,20 @@ a {
 .btn-full { width: 100%; padding: 12px; }
 
 /* ================= Header ================= */
+
+/* Tùy chỉnh kích thước Logo hình ảnh */
+.img-logo {
+    max-width: 140px; /* Chiều rộng tối đa của logo trên thanh menu */
+    height: auto;
+    display: block;
+}
+
+.img-logo-footer {
+    max-width: 160px; /* Logo ở footer có thể để to hơn một chút */
+    margin-bottom: 15px; /* Tạo khoảng thở với đoạn văn bản bên dưới */
+    height: auto;
+    display: block;
+}
 .header {
     background: #fff;
     padding: 15px 0;
@@ -184,7 +198,6 @@ a {
 .footer-col ul li { margin-bottom: 12px; font-size: 14px; }
 .footer-col ul a:hover { color: #f26522; }
 .socials { font-size: 24px; gap: 15px; display: flex; }
-
 /* ================= Responsive ================= */
 /* ================= TỐI ƯU CHO PC / MÀN HÌNH RỘNG ================= */
 
