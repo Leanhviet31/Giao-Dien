@@ -38,29 +38,32 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero-section" class="hero bg-light">
-        <div class="container flex-row">
+    <section id="hero-section" class="hero banner-bg">
+        <!-- Lớp phủ mờ để chữ hiển thị rõ trên nền ảnh -->
+        <div class="hero-overlay"></div>
+        
+        <div class="container flex-row" style="position: relative; z-index: 2; align-items: stretch;">
             <div class="hero-content">
                 <h1>Tìm chậu rửa bát<br>phù hợp với bếp<br>của bạn</h1>
                 <p class="subtitle">Chọn đúng chậu. Đúng kích thước. Đúng phong cách.<br>Với CRB FitMatch, việc chọn chậu trở nên đơn giản hơn bao giờ hết.</p>
                 
                 <div class="hero-buttons flex-row">
                     <button id="btn-bat-dau" class="btn btn-primary">BẮT ĐẦU CHỌN CHẬU ➔</button>
-                    <button id="btn-thay-chau" class="btn btn-outline">THAY CHẬU CŨ</button>
+                    <button id="btn-thay-chau" class="btn btn-outline bg-white">THAY CHẬU CŨ</button>
                 </div>
 
                 <div class="hero-features flex-row">
                     <div class="feature-item flex-center">
-                        <span class="icon">⚡</span>
+                        <span class="icon dark-icon">⚡</span>
                         <div><strong>Chọn nhanh</strong><br>Chỉ vài bước</div>
                     </div>
                     <div class="feature-item flex-center">
-                        <span class="icon">🛡️</span>
+                        <span class="icon dark-icon">🛡️</span>
                         <div><strong>Đa thương hiệu</strong><br>Hàng chính hãng</div>
                     </div>
                     <div class="feature-item flex-center">
-                        <span class="icon">🔧</span>
-                        <div><strong>Dễ lắp đặt</strong><br>Hỗ trợ toàn quốc</div>
+                        <span class="icon dark-icon">🔧</span>
+                        <div><strong>Có lắp đặt</strong><br>Hỗ trợ toàn quốc</div>
                     </div>
                 </div>
                 
@@ -69,46 +72,68 @@
                 </div>
             </div>
 
+            <!-- Form AI đã được chia 2 cột -->
             <div class="hero-form">
-                <div class="form-card">
-                    <div class="form-header flex-between">
-                        <h3>CRB FitMatch <span class="badge">AI</span></h3>
-                        <span class="sub-text">Chọn chậu phù hợp chỉ trong vài bước</span>
+                <div class="form-card complex-form">
+                    <div class="form-main">
+                        <div class="form-header flex-between">
+                            <h3>CRB FitMatch <span class="badge">AI</span></h3>
+                            <span class="sub-text">Chọn chậu phù hợp chỉ trong vài bước</span>
+                        </div>
+                        
+                        <form id="ai-form">
+                            <div class="form-group">
+                                <label><span class="step-num">1</span> Tình trạng bếp của bạn</label>
+                                <div class="radio-group flex-row">
+                                    <label><input type="radio" name="status" checked> <span class="radio-text">Bếp mới</span></label>
+                                    <label><input type="radio" name="status"> <span class="radio-text">Thay chậu cũ</span></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label><span class="step-num">2</span> Kích thước tủ bếp (cm)</label>
+                                <select><option>Chọn kích thước tủ</option></select>
+                            </div>
+                            <div class="form-group">
+                                <label><span class="step-num">3</span> Ngân sách dự kiến</label>
+                                <select><option>Chọn khoảng ngân sách</option></select>
+                            </div>
+                            <div class="form-group">
+                                <label><span class="step-num">4</span> Ưu tiên của bạn</label>
+                                <div class="radio-group flex-row">
+                                    <label><input type="radio" name="priority" checked> <span class="radio-text">Bền bỉ</span></label>
+                                    <label><input type="radio" name="priority"> <span class="radio-text">Thẩm mỹ</span></label>
+                                    <label><input type="radio" name="priority"> <span class="radio-text">Đa năng</span></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label><span class="step-num">5</span> Tải ảnh bếp lên <span class="light-text">(Không bắt buộc)</span></label>  
+                                <div class="upload-box flex-center" id="upload-box">  
+                                    <input type="file" id="file-upload" accept="image/*" style="display: none;">
+                                    <span id="upload-text">↑ Kéo thả ảnh vào đây<br>hoặc chọn ảnh</span>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-full" id="btn-submit-form">XEM GỢI Ý PHÙ HỢP ➔</button>
+                        </form>
                     </div>
                     
-                    <form id="ai-form">
-                        <div class="form-group">
-                            <label>1. Tình trạng bếp của bạn</label>
-                            <div class="radio-group flex-row">
-                                <label><input type="radio" name="status" checked> Bếp mới</label>
-                                <label><input type="radio" name="status"> Thay chậu cũ</label>
+                    <!-- Sidebar AI bên phải -->
+                    <div class="form-sidebar">
+                        <h5>Gợi ý từ AI của CRB</h5>
+                        <div class="ai-suggestion-imgs">
+                            <div class="img-box">
+                                <span class="badge-dark">Trước</span>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkUFyxHflXb5DP6IkUX-mRM8Isq6GGLWXchEQne34ZMQ&s=10" alt="Bếp cũ">
+                            </div>
+                            <div class="arrow-down">↓</div>
+                            <div class="img-box">
+                                <span class="badge-dark">Sau</span>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJy-4F2bDkJtlJdthSl4FT0KpX2QgJIFKBKIT2BkZq8A&s=10" alt="Bếp mới">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label>2. Kích thước tủ bếp (cm)</label>
-                            <select><option>Chọn kích thước tủ</option></select>
+                        <div class="sidebar-signature">
+                            Cùng một căn bếp<br>Khác biệt lớn hơn
                         </div>
-                        <div class="form-group">
-                            <label>3. Ngân sách dự kiến</label>
-                            <select><option>Chọn khoảng ngân sách</option></select>
-                        </div>
-                        <div class="form-group">
-                            <label>4. Ưu tiên của bạn</label>
-                            <div class="radio-group flex-row">
-                                <label><input type="radio" name="priority" checked> Bền bỉ</label>
-                                <label><input type="radio" name="priority"> Thẩm mỹ</label>
-                                <label><input type="radio" name="priority"> Đa năng</label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>5. Tải ảnh bếp lên <span class="light-text">(Không bắt buộc)</span></label>  
-                                <div class="upload-box flex-center" id="upload-box">  
-                            <input type="file" id="file-upload" accept="image/*" style="display: none;">
-                                <span id="upload-text">Tải ảnh bếp vào đây<br>hoặc chọn ảnh</span>
-                        </div>
-                        </div>
-                        <button type="button" class="btn btn-primary btn-full" id="btn-submit-form">XEM GỢI Ý PHÙ HỢP ➔</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

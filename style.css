@@ -207,6 +207,84 @@ a {
 .footer-col ul li { margin-bottom: 12px; font-size: 14px; }
 .footer-col ul a:hover { color: #f26522; }
 .socials { font-size: 24px; gap: 15px; display: flex; }
+
+/* ================= TÙY CHỈNH HERO BANNER THẨM MỸ ================= */
+
+/* Ảnh nền nhà bếp và Lớp phủ */
+.banner-bg {
+    /* Đang dùng ảnh giả lập, bạn hãy đổi link ảnh nhà bếp thật vào đây */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKNkMK14LefJZoOCNMwxDS35MU1SjfqYvpmlOpCqcm7w&s=10');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 60px 0;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* Gradient: Từ trắng đục (trái) chuyển sang trong suốt (phải) */
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.85) 45%, rgba(255,255,255,0) 100%);
+}
+
+.bg-white { background-color: #fff !important; }
+
+/* Thay đổi Icon thành nền đậm */
+.feature-item .dark-icon {
+    background: #0d3b45;
+    color: #fff;
+    font-size: 18px;
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+}
+
+/* Cấu trúc chia cột Form AI và Sidebar */
+.hero-form { flex: 0 0 55%; max-width: 55%; }
+.hero-content { flex: 0 0 45%; max-width: 45%; padding-right: 20px; }
+
+.complex-form {
+    display: flex;
+    padding: 0;
+    overflow: hidden; /* Cắt viền bo góc thừa */
+}
+.form-main { padding: 25px; flex: 1; }
+
+.form-sidebar {
+    width: 170px;
+    background: #eef7f7;
+    padding: 20px 15px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    border-left: 1px solid #d8ebeb;
+}
+
+/* Các vòng tròn số thứ tự trong Form */
+.step-num {
+    display: inline-flex; width: 22px; height: 22px;
+    background: #0d3b45; color: white; border-radius: 50%;
+    align-items: center; justify-content: center; font-size: 12px; margin-right: 5px;
+}
+
+/* Tùy chỉnh màu chữ cam cho Radio khi được chọn */
+.radio-group input[type="radio"] { accent-color: #f26522; }
+.radio-group label { display: flex; align-items: center; font-weight: normal; }
+.radio-text { margin-left: 5px; color: #333; }
+
+/* Trang trí Sidebar Trước/Sau */
+.form-sidebar h5 { text-align: center; color: #0d3b45; margin-bottom: 15px; font-size: 13px;}
+.ai-suggestion-imgs .img-box { position: relative; margin-bottom: -5px; }
+.ai-suggestion-imgs img { border-radius: 6px; border: 3px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: block;}
+.badge-dark { position: absolute; top: 5px; left: 5px; background: #0d3b45; color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 4px; z-index: 2;}
+.arrow-down { 
+    text-align: center; color: #0d3b45; font-weight: bold; background: #fff; 
+    width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+    margin: 0 auto; position: relative; z-index: 3; box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+.sidebar-signature { font-family: 'Brush Script MT', cursive; font-size: 18px; color: #00796b; text-align: center; margin-top: 15px; line-height: 1.2;}
+
+/* Responsive cho Sidebar khi thu nhỏ máy tính bảng */
+@media (max-width: 1200px) {
+    .form-sidebar { display: none; } /* Ẩn cột Before/After nếu màn hình bị chật */
+}
+
 /* ================= Responsive ================= */
 /* ================= TỐI ƯU CHO PC / MÀN HÌNH RỘNG ================= */
 
