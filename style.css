@@ -635,6 +635,38 @@ a {
     font-weight: bold;
 }
 
+/* ================= Trusted Brands ================= */
+.trusted-brands {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #fff;
+}
+.trusted-brands .brands-header {
+    margin-bottom: 25px;
+}
+.trusted-brands .brands-title {
+    color: #0d3b45;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+.trusted-brands .brands-list {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.trusted-brands .brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+.trusted-brands .brand-logo:hover {
+    opacity: 1;
+}
+
 /* ================= Responsive ================= */
 /* ================= TỐI ƯU CHO PC / MÀN HÌNH RỘNG ================= */
 
