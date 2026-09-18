@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
 /* ================= Base Reset ================= */
 * {
     margin: 0;
@@ -76,7 +76,7 @@ a {
 
 /* Tùy chỉnh kích thước Logo hình ảnh */
 .img-logo {
-    max-width: 140px; /* Chiều rộng tối đa của logo trên thanh menu */
+    max-width: 110px; /* Chiều rộng tối đa của logo trên thanh menu */
     height: auto;
     display: block;
 }
@@ -89,7 +89,7 @@ a {
 }
 .header {
     background: #fff;
-    padding: 15px 0;
+    padding: 1px 0;
     border-bottom: 1px solid #eee;
 }
 .logo h2 { color: #0d3b45; font-weight: 900; line-height: 1; margin: 0; }
@@ -128,7 +128,7 @@ a {
 .hero-signature { font-family: 'Brush Script MT', cursive; font-size: 28px; color: #777; }
 
 /* AI Form Card */
-.hero-form { flex: 0 0 50%; max-width: 50%; padding: 0 20px; }
+.hero-form { flex: 0 0 50%; max-width: 50%; padding: 0 50px; }
 .form-card {
     background: #fff;
     border-radius: 12px;
@@ -162,53 +162,164 @@ a {
 .category-card h4 { color: #0d3b45; }
 .category-card p { font-size: 13px; color: #666; }
 
-/* ================= Products ================= */
-.product-card {
+/* ================= Products Cập nhật ================= */
+
+/* 1. Ép các hình ảnh sản phẩm có chung một chiều cao để không bị xô lệch */
+.product-card > img {
+    width: 100%;
+    height: 200px; /* Khóa cứng chiều cao ảnh */
+    object-fit: contain; /* Giữ nguyên tỷ lệ ảnh, tự thêm khoảng trắng nếu thiếu */
+    padding: 20px; /* Tạo khoảng thở xung quanh ảnh */
+    background-color: #fff;
+    border-bottom: 1px solid #f5f5f5; /* Thêm đường viền mờ ngăn cách ảnh và nội dung */
+    display: flex; 
+    flex-direction: column;
+}
+
+.product-info { 
+    padding: 20px; /* Tăng padding nhẹ để form rộng rãi giống ảnh của bạn */
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Ép phần thông tin giãn ra chiếm hết khoảng trống */
+}
+/* 2. Căn chỉnh phần giá tiền to, rõ ràng hơn */
+.price { 
+    display: flex; 
+    align-items: baseline; 
+    gap: 8px; 
+    margin-bottom: 15px; 
+}
+.price strong { font-size: 22px; color: #f26522; font-weight: 700; }
+.price del { font-size: 14px; color: #a0a0a0; text-decoration: line-through; }
+
+/* 3. Tạo khung viền bo tròn (Pill) cho thông số kỹ thuật giống Hình 2 */
+.specs { 
+    gap: 8px; 
+    margin-bottom: 20px; 
+}
+.spec-pill {
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 12px;
+    color: #555;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     background: #fff;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 20px;
-    transition: 0.3s;
 }
-.product-card:hover { box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
-.product-info { padding: 15px; }
-.product-info .brand { font-size: 12px; color: #888; text-transform: uppercase; }
-.product-info h4 { font-size: 16px; margin: 8px 0; color: #333; }
-.price { margin-bottom: 15px; }
-.price strong { font-size: 18px; }
-.price del { font-size: 14px; color: #999; margin-left: 10px; }
-.specs { gap: 10px; font-size: 12px; color: #666; margin-bottom: 20px; }
-.product-actions { gap: 10px; }
-.product-actions .btn { flex: 1; padding: 8px 5px; font-size: 12px; }
-
-/* ================= Replacement Banner ================= */
-.replacement-banner { background: #e0f2f5; padding: 50px 0; }
-.banner-text h2 { color: #0d3b45; margin-bottom: 15px; }
-.step-item { text-align: center; }
-.step-icon {
-    width: 60px; height: 60px; background: #fff; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 24px; margin: 0 auto 15px; color: #00796b; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+.spec-pill i {
+    font-size: 12px;
+    color: #555;
 }
-.step-item h5 { color: #0d3b45; margin-bottom: 5px; }
-.step-item p { font-size: 12px; color: #555; }
 
-/* ================= Footer CTA & Footer ================= */
-.footer-cta { padding: 30px 0; }
-.cta-text h3 { margin-bottom: 5px; }
-.cta-text p { font-size: 14px; color: #ccc; }
-.cta-action { gap: 20px; }
-.hotline-white span { font-size: 12px; }
-.hotline-white strong { font-size: 20px; }
+/* 4. Chỉnh nút bấm đều nhau */
+.product-actions { 
+    gap: 10px; 
+    display: flex; 
+    margin-top: auto;
+}
+.product-actions .btn { 
+    flex: 1; 
+    padding: 10px 5px; 
+    font-size: 13px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 6px; 
+}
+.product-actions .btn-outline {
+    border-color: #e0e0e0;
+    color: #333;
+}
 
-.footer { border-top: 1px solid #eee; }
-.footer-col h4 { margin-bottom: 20px; color: #0d3b45; }
-.footer-col ul { list-style: none; }
-.footer-col ul li { margin-bottom: 12px; font-size: 14px; }
-.footer-col ul a:hover { color: #f26522; }
-.socials { font-size: 24px; gap: 15px; display: flex; }
+/* ================= Replacement Banner (Giao diện Card mới) ================= */
+.replacement-banner { 
+    background: #f4f9f9; /* Màu nền xanh nhạt y hệt ảnh 2 */
+    padding: 60px 0; 
+}
 
+/* Chỉnh tỷ lệ cột chữ và tạo khoảng cách */
+.banner-text { 
+    padding-right: 40px; 
+}
+.banner-text h2 { 
+    color: #0d3b45; 
+    margin-bottom: 15px; 
+    font-size: 28px;
+}
+.banner-text p {
+    color: #555;
+}
+
+/* Tạo đường kẻ dọc ngăn cách 2 bên */
+.banner-steps-container {
+    border-left: 2px solid #e2ecec; /* Đường kẻ dọc mờ */
+    padding-left: 20px;
+}
+
+/* Định dạng từng thẻ trắng (Card) */
+.step-item { 
+    padding: 0 10px; 
+    height: auto;
+}
+.step-card {
+    background: #fff;
+    border-radius: 16px; /* Bo góc to như ảnh */
+    padding: 30px 10px 20px; /* Căn chỉnh khoảng trống trong card */
+    text-align: center;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03); /* Đổ bóng cực nhẹ */
+}
+
+/* Con số đánh thứ tự góc trái trên */
+.step-number {
+    position: absolute;
+    top: -10px;   /* Nhô lên khỏi thẻ một chút */
+    left: -10px;  /* Nhô ra ngoài cạnh trái một chút */
+    width: 26px;
+    height: 26px;
+    background-color: #0d3b45; /* Xanh đậm */
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    border: 3px solid #f4f9f9; /* Tạo viền bao quanh để cắt nền */
+    z-index: 2;
+}
+
+/* Định dạng vòng tròn chứa Icon */
+.step-card .step-icon {
+    width: 65px; 
+    height: 65px; 
+    background: #f0f6f6; /* Nền xanh/xám nhạt */
+    border-radius: 50%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    font-size: 26px; 
+    margin: 0 auto 15px; 
+    color: #0d3b45; /* Màu icon xanh đậm */
+}
+
+.step-card h5 { 
+    color: #0d3b45; 
+    margin-bottom: 5px; 
+    font-size: 15px;
+    font-weight: 700;
+}
+.step-card p { 
+    font-size: 12px; 
+    color: #666; 
+    line-height: 1.4;
+}
 /* ================= TÙY CHỈNH HERO BANNER THẨM MỸ ================= */
 
 /* Ảnh nền nhà bếp và Lớp phủ */
@@ -430,23 +541,23 @@ a {
 /* Phần "Bếp tốt hơn mỗi ngày" */
 .hero-signature,
 .hero-signature i {
-    font-family: 'Caveat', cursive !important;
-    font-size: 38px !important; /* Chữ to rõ ràng */
-    color: #0d3b45 !important; /* Màu xanh đen đậm */
-    transform: rotate(-8deg); /* Nghiêng lên trên 8 độ */
+    font-family: 'Dancing Script', cursive !important; /* Đổi tên font tại đây */
+    font-size: 42px !important; /* Tăng nhẹ size vì Dancing Script hơi nhỏ hơn Caveat */
+    color: #0d3b45 !important; 
+    transform: rotate(-8deg); 
     display: inline-block;
-    line-height: 1.1 !important;
+    line-height: 1.2 !important; /* Giãn dòng ra một chút cho chữ không dính dấu */
     margin-top: 30px;
     font-weight: 600;
 }
 
 /* Phần "Cùng một căn bếp - Khác biệt lớn hơn" */
 .sidebar-signature {
-    font-family: 'Caveat', cursive !important;
-    font-size: 28px !important; 
-    color: #0d3b45 !important; /* Màu xanh đen */
-    transform: rotate(-6deg); /* Nghiêng nhẹ hơn phần bên trái */
-    line-height: 1.1 !important;
+    font-family: 'Dancing Script', cursive !important; /* Đổi tên font tại đây */
+    font-size: 32px !important; /* Tăng nhẹ size */
+    color: #0d3b45 !important; 
+    transform: rotate(-6deg); 
+    line-height: 1.2 !important;
     margin-top: 25px;
     font-weight: 600;
     text-align: center;
