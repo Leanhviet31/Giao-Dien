@@ -305,14 +305,14 @@ a {
     display: flex; 
     align-items: center; 
     justify-content: center;
-    font-size: 26px; 
+    font-size: 28px; /* Tăng nhẹ để cân đối hơn */
     margin: 0 auto 15px; 
     color: #0d3b45; /* Màu icon xanh đậm */
 }
 
 .step-card h5 { 
     color: #0d3b45; 
-    margin-bottom: 5px; 
+    margin-bottom: 8px; 
     font-size: 15px;
     font-weight: 700;
 }
@@ -320,6 +320,8 @@ a {
     font-size: 12px; 
     color: #666; 
     line-height: 1.4;
+    min-height: 34px; /* Đảm bảo đủ chiều cao cho 2 dòng, giúp thẻ luôn cân bằng */
+    margin: 0;
 }
 /* ================= TÙY CHỈNH HERO BANNER THẨM MỸ ================= */
 
