@@ -49,6 +49,7 @@ a {
 .col-4 { flex: 0 0 33.333%; max-width: 33.333%; padding: 0 10px; }
 .col-5 { flex: 0 0 41.666%; max-width: 41.666%; padding: 0 10px; }
 .col-7 { flex: 0 0 58.333%; max-width: 58.333%; padding: 0 10px; }
+.col-8 { flex: 0 0 66.666%; max-width: 66.666%; padding: 0 10px; }
 
 .section-padding { padding: 50px 15px; }
 .mt-2 { margin-top: 20px; }
