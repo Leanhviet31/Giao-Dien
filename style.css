@@ -602,6 +602,39 @@ a {
     line-height: 1.2;
 }
 
+/* ================= Footer Social Icons ================= */
+.socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #4b5563; /* Xám đen giống hình mẫu */
+    color: #fff;
+    border-radius: 50%;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.social-icon:hover {
+    background-color: #0d3b45;
+}
+.social-icon.youtube-icon {
+    border-radius: 10px; /* YouTube chữ nhật bo góc nhẹ */
+    font-size: 14px;
+}
+.social-icon.zalo-icon {
+    border-radius: 10px; /* Zalo hình vuông bo góc */
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
 /* ================= Responsive ================= */
 /* ================= TỐI ƯU CHO PC / MÀN HÌNH RỘNG ================= */
 
