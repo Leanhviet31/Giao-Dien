@@ -87,24 +87,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     const mobileToggle = document.getElementById("mobile-menu-toggle");
-    const navMenu = document.getElementById("nav-menu");
+    const mobileDrawer = document.getElementById("mobile-drawer");
+    const mobileOverlay = document.getElementById("mobile-drawer-overlay");
+    const closeDrawer = document.getElementById("close-drawer");
 
-    mobileToggle.addEventListener("click", function () {
-        if (navMenu.style.display === "flex") {
-            navMenu.style.display = "none";
-        } else {
-            navMenu.style.display = "flex";
-            navMenu.style.flexDirection = "column";
-            navMenu.style.position = "absolute";
-            navMenu.style.top = "70px";
-            navMenu.style.left = "0";
-            navMenu.style.width = "100%";
-            navMenu.style.backgroundColor = "#fff";
-            navMenu.style.padding = "20px";
-            navMenu.style.boxShadow = "0 5px 10px rgba(0,0,0,0.1)";
-            navMenu.style.zIndex = "1000";
+    function openDrawer() {
+        if (mobileDrawer && mobileOverlay) {
+            mobileDrawer.classList.add("active");
+            mobileOverlay.classList.add("active");
+            // Prevent body scroll when drawer is open
+            document.body.style.overflow = "hidden";
         }
-    });
+    }
+
+    function hideDrawer() {
+        if (mobileDrawer && mobileOverlay) {
+            mobileDrawer.classList.remove("active");
+            mobileOverlay.classList.remove("active");
+            // Restore body scroll
+            document.body.style.overflow = "auto";
+        }
+    }
+
+    if (mobileToggle) mobileToggle.addEventListener("click", openDrawer);
+    if (closeDrawer) closeDrawer.addEventListener("click", hideDrawer);
+    if (mobileOverlay) mobileOverlay.addEventListener("click", hideDrawer);
 
     // Bắt sự kiện khi click vào nút xem gợi ý form AI
     const btnSubmit = document.getElementById("btn-submit-form");
