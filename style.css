@@ -873,8 +873,9 @@ a {
 
     /* Header Hotline */
     .header .flex-between { align-items: center; }
+    .mobile-menu-toggle { order: 1; margin: 0; }
+    .logo { order: 2; margin: 0 auto; }
     .header-action { order: 3; }
-    .mobile-menu-toggle { order: 2; margin-right: auto; margin-left: 15px; }
     .header-action .hotline { margin-right: 0 !important; text-align: right; }
     .header-action .hotline span { display: none; }
     
