@@ -860,12 +860,9 @@ a {
 /* ===== Màn hình Điện thoại (Mobile) ===== */
 @media (max-width: 576px) {
     .col-4, .col-3, .col-2 { flex: 0 0 100%; max-width: 100%; }
+    
+    /* Hero & General */
     .hero-buttons .btn { width: 100%; margin-bottom: 10px; }
-    .product-actions { flex-direction: column; }
-    .footer-col { margin-bottom: 30px; }
-    .cta-action { flex-direction: column; align-items: flex-start; margin-top: 20px; }
-    .header-action .hotline { text-align: left; }
-    .header-action .hotline span { display: none; }
     .hero-content h1 { font-size: 32px; }
     .hero-signature { font-size: 22px; }
     .radio-group { flex-direction: column; gap: 12px; }
@@ -873,5 +870,40 @@ a {
     .section-padding { padding: 30px 15px; }
     .hero { padding: 20px 0; }
     .btn { padding: 14px 15px; } 
+
+    /* Header Hotline */
+    .header .flex-between { align-items: center; }
+    .header-action { order: 3; }
+    .mobile-menu-toggle { order: 2; margin-right: auto; margin-left: 15px; }
+    .header-action .hotline { margin-right: 0 !important; text-align: right; }
+    .header-action .hotline span { display: none; }
+    
+    /* Products */
+    .product-actions { flex-direction: column; }
     .product-actions .btn { width: 100%; margin-bottom: 8px; }
+    
+    /* Section Headers */
+    .section-header.flex-between { flex-direction: column; align-items: flex-start; gap: 12px; }
+    
+    /* Replacement Banner (AI Steps) */
+    .banner-text { padding-right: 0; margin-bottom: 25px; }
+    .banner-steps-container { border-left: none; padding-left: 0; }
+    .banner-steps { flex-direction: column; gap: 20px; }
+    /* Timeline style for steps on mobile */
+    .step-card { 
+        flex-direction: row; 
+        text-align: left; 
+        padding: 15px; 
+        align-items: center; 
+        border-left: 3px solid #0d3b45; 
+        border-radius: 8px;
+    }
+    .step-card .step-icon { margin: 0 15px 0 0; width: 45px; height: 45px; font-size: 20px; }
+    .step-number { top: -10px; left: -10px; }
+
+    /* Footer & CTA */
+    .footer-col { margin-bottom: 30px; }
+    .footer-cta .flex-between { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .cta-action { flex-direction: column; align-items: flex-start; margin-top: 10px; gap: 15px; width: 100%; }
+    .footer-cta .btn-lg { width: 100%; text-align: center; justify-content: center; }
 }
