@@ -56,12 +56,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // --- CODE CUỘN TRANG TỪ HEADER XUỐNG PHẦN SẢN PHẨM ---
     const btnTimChau = document.getElementById("btn-tim-chau");
+    const btnTimChauDrawer = document.getElementById("btn-tim-chau-drawer");
     const sectionMauPhuHop = document.getElementById("mau-phu-hop");
 
-    if (btnTimChau && sectionMauPhuHop) {
-        btnTimChau.addEventListener("click", function() {
-            // Cuộn mượt mà xuống phần 3 mẫu phù hợp
+    function cuonXuongMauPhuHop() {
+        if (sectionMauPhuHop) {
             sectionMauPhuHop.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+
+    if (btnTimChau) {
+        btnTimChau.addEventListener("click", cuonXuongMauPhuHop);
+    }
+
+    if (btnTimChauDrawer) {
+        btnTimChauDrawer.addEventListener("click", function() {
+            cuonXuongMauPhuHop();
+            // Nếu hàm hideDrawer có tồn tại (mobile menu đang mở) thì đóng menu lại
+            if (typeof hideDrawer === 'function') {
+                hideDrawer();
+            }
         });
     }
 
