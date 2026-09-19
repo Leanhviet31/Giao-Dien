@@ -857,6 +857,9 @@ a {
     text-align: center;
 }
 
+/* Hide mobile drawer on desktop by default */
+.mobile-drawer, .mobile-drawer-overlay { display: none; }
+
 /* ===== Màn hình Điện thoại (Mobile) ===== */
 @media (max-width: 576px) {
     /* Mobile Drawer Menu */
