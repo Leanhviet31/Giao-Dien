@@ -713,6 +713,61 @@ a {
     opacity: 1;
 }
 
+/* ================= Footer ================= */
+.footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #fff;
+    border-top: 1px solid #eaeaea;
+}
+.img-logo-footer {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+}
+.footer-col p {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+.footer-col h4 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+.footer-col ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+.footer-col ul li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 14px;
+}
+.footer-col ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.footer-col ul li a {
+    color: #555;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    line-height: 1.5;
+}
+.footer-col ul li a:hover {
+    color: #0d3b45;
+}
+
 /* ================= Responsive ================= */
 /* ================= TỐI ƯU CHO PC / MÀN HÌNH RỘNG ================= */
 
