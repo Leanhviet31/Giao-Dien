@@ -162,4 +162,15 @@ document.addEventListener("DOMContentLoaded", function () {
         updateRadioPills();
     }
 
+    // --- CODE CHO FOOTER ACCORDION TRÊN MOBILE ---
+    const footerToggles = document.querySelectorAll(".footer-toggle");
+    footerToggles.forEach(toggle => {
+        toggle.addEventListener("click", function() {
+            if (window.innerWidth <= 576) {
+                const footerCol = this.closest(".footer-col");
+                footerCol.classList.toggle("active");
+            }
+        });
+    });
+
 });

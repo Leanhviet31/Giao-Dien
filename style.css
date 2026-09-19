@@ -1148,6 +1148,10 @@ a {
     margin-top: 0;
 }
 
+.footer-toggle i {
+    display: none; /* Ẩn icon trên máy tính */
+}
+
 .footer-col ul {
     list-style-type: none;
     padding-left: 0;
@@ -1599,7 +1603,37 @@ a {
 
     /* Footer & CTA */
     .footer-col {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
+    }
+
+    .footer-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding: 12px 0;
+        margin-bottom: 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .footer-toggle i {
+        display: block;
+        transition: transform 0.3s ease;
+        color: #0d3b45;
+    }
+
+    .footer-col .footer-toggle + ul {
+        display: none;
+        padding-top: 15px;
+        padding-bottom: 5px;
+    }
+
+    .footer-col.active .footer-toggle + ul {
+        display: block;
+    }
+
+    .footer-col.active .footer-toggle i {
+        transform: rotate(180deg);
     }
 
     .footer-cta .flex-between {
