@@ -885,6 +885,11 @@ a {
     /* Section Headers */
     .section-header.flex-between { flex-direction: column; align-items: flex-start; gap: 12px; }
     
+    /* Brands Section */
+    .brands-header.flex-between { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .brands-list.flex-between { justify-content: center; gap: 20px; }
+    .trusted-brands .brand-logo { font-size: 18px !important; } /* Thu nhỏ nhẹ logo text trên mobile */
+
     /* Replacement Banner (AI Steps) */
     .banner-text { padding-right: 0; margin-bottom: 25px; }
     #btn-thu-ngay { font-size: 13px; padding: 14px 10px; white-space: normal; line-height: 1.4; width: 100%; text-align: center; }
