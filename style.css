@@ -1500,7 +1500,8 @@ a {
 
     .logo {
         order: 2;
-        margin: 0 auto;
+        margin-left: 15px;
+        margin-right: auto;
     }
 
     .header-action {
