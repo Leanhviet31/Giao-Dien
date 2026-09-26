@@ -463,28 +463,30 @@ a {
 /* ================= Products Cập nhật ================= */
 
 /* 1. Ép các hình ảnh sản phẩm có chung một chiều cao để không bị xô lệch */
-.product-card>img {
-    width: 100%;
-    height: 200px;
-    /* Khóa cứng chiều cao ảnh */
-    object-fit: contain;
-    /* Giữ nguyên tỷ lệ ảnh, tự thêm khoảng trắng nếu thiếu */
-    padding: 20px;
-    /* Tạo khoảng thở xung quanh ảnh */
-    background-color: #fff;
-    border-bottom: 1px solid #f5f5f5;
-    /* Thêm đường viền mờ ngăn cách ảnh và nội dung */
+.product-card {
     display: flex;
     flex-direction: column;
+    height: 100%;
+}
+
+.product-card a>img {
+    width: 100%;
+    height: 220px;
+    /* Bạn có thể tăng giảm số này (ví dụ 200px - 250px) để vừa mắt */
+    object-fit: cover;
+    /* Cắt bớt phần rìa thừa để lấp đầy khung hình mà không méo ảnh */
+    display: block;
+    background-color: #fff;
+    /* Lót nền trắng phòng trường hợp dùng object-fit: contain */
 }
 
 .product-info {
-    padding: 20px;
-    /* Tăng padding nhẹ để form rộng rãi giống ảnh của bạn */
     display: flex;
     flex-direction: column;
-    flex: 1;
-    /* Ép phần thông tin giãn ra chiếm hết khoảng trống */
+    flex-grow: 1;
+    /* Yêu cầu phần này giãn ra để chiếm hết không gian trống */
+    padding: 15px;
+    /* Thêm padding nếu code cũ của bạn chưa có để chữ không sát lề */
 }
 
 /* 2. Căn chỉnh phần giá tiền to, rõ ràng hơn */
@@ -1149,7 +1151,8 @@ a {
 }
 
 .footer-toggle i {
-    display: none; /* Ẩn icon trên máy tính */
+    display: none;
+    /* Ẩn icon trên máy tính */
 }
 
 .footer-col ul {
@@ -1623,13 +1626,13 @@ a {
         color: #0d3b45;
     }
 
-    .footer-col .footer-toggle + ul {
+    .footer-col .footer-toggle+ul {
         display: none;
         padding-top: 15px;
         padding-bottom: 5px;
     }
 
-    .footer-col.active .footer-toggle + ul {
+    .footer-col.active .footer-toggle+ul {
         display: block;
     }
 
